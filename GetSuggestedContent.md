@@ -1,0 +1,117 @@
+The user content endpoint is a read-only resource used for receiving content recommendations for a given user or topic. It returns a JSON array of content items represented by JSON objects as detailed below.
+
+#### URL: ####
+http://sendible.com/api/v2/suggested_content.json
+
+#### HTTP Methods: ####
+GET
+
+#### Parameters: ####
+  * `application_id`: Your application id from http://sendible.com/developers.
+  * `topics`: Optional. Set this parameter to return results for a set of topics, separated by commas. These must be valid topics and are case sensitive, returned by this call: [GetSuggestedTopics](GetSuggestedTopics.md)
+
+#### Authentication: ####
+Basic authentication with username and password or remote API key belonging to the Sendible user.
+
+#### Success Response: ####
+```
+{
+  "items": {
+    "results": [
+      {
+        "images": {
+          "original": {
+            "size": [
+              970,
+              646
+            ],
+            "url": "https://swayy_images.s3.amazonaws.com/images/c61f1865459848de9b93ea0fb91523fb.png"
+          },
+          "medium": {
+            "size": [
+              500,
+              500
+            ],
+            "url": "https://swayy_images.s3.amazonaws.com/images/c61f1865459848de9b93ea0fb91523fb_medium.png"
+          },
+          "thumbnail": {
+            "size": [
+              200,
+              200
+            ],
+            "url": "https://swayy_images.s3.amazonaws.com/images/c61f1865459848de9b93ea0fb91523fb_thumb.png"
+          }
+        },
+        "published": 1399395458,
+        "source": "http://digitaltrends.com/",
+        "title": "How Facebook, Twitter, and Bing are giving researchers the perfect guinea pig (you)",
+        "url": "http://www.digitaltrends.com/features/facebook-bing-twitter-saving-sociology-screwing/",
+        "share_url": "http://www.digitaltrends.com/features/facebook-bing-twitter-saving-sociology-screwing/?sm=1"
+      },
+      {
+        "images": {
+          "original": {
+            "size": [
+              620,
+              412
+            ],
+            "url": "https://swayy_images.s3.amazonaws.com/images/850244b0e6764206b56698c8778465b8.png"
+          },
+          "medium": {
+            "size": [
+              500,
+              500
+            ],
+            "url": "https://swayy_images.s3.amazonaws.com/images/850244b0e6764206b56698c8778465b8_medium.png"
+          },
+          "thumbnail": {
+            "size": [
+              200,
+              200
+            ],
+            "url": "https://swayy_images.s3.amazonaws.com/images/850244b0e6764206b56698c8778465b8_thumb.png"
+          }
+        },
+        "index": 1,
+        "published": 1399466930,
+        "source": "http://salon.com/",
+        "title": "Hobby Lobby-style drama ensnares Jewish elementary school",
+        "url": "http://www.salon.com/2014/05/07/hobby_lobby_style_drama_ensnares_jewish_elementary_school/",
+        "share_url": "http://www.salon.com/2014/05/07/hobby_lobby_style_drama_ensnares_jewish_elementary_school/?sm=1"
+
+      },
+      {
+        "images": {
+          "original": {
+            "size": [
+              738,
+              492
+            ],
+            "url": "https://swayy_images.s3.amazonaws.com/images/0cffd5d346424e9abe32fdb2b3667245.png"
+          },
+          "medium": {
+            "size": [
+              500,
+              500
+            ],
+            "url": "https://swayy_images.s3.amazonaws.com/images/0cffd5d346424e9abe32fdb2b3667245_medium.png"
+          },
+          "thumbnail": {
+            "size": [
+              200,
+              200
+            ],
+            "url": "https://swayy_images.s3.amazonaws.com/images/0cffd5d346424e9abe32fdb2b3667245_thumb.png"
+          }
+        },
+        "index": 2,
+        "published": 1399402431,
+        "source": "http://techcrunch.com/mobile/",
+        "title": "Kwoller, A Tinder For Fashion Price-Tracking, Launches At Disrupt NY",
+        "url": "http://techcrunch.com/2014/05/06/kwoller-a-tinder-for-fashion-price-tracking-launches-at-disrupt-ny/",
+        "share_url": "http://techcrunch.com/2014/05/06/kwoller-a-tinder-for-fashion-price-tracking-launches-at-disrupt-ny/?sm=1"
+      }
+    ]
+  }
+}
+```
